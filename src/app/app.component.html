@@ -64,12 +64,13 @@
       </li>
     </div>
   </div>
-  <div *ngIf="isFetching&&!error">
+  <div *ngIf="isFetching && !error">
     <p>Loading ...</p>
   </div>
   <div *ngIf="error" class="alert alert-danger">
-    <h2>Error detected</h2>
-    <p>{{error}}</p>
-    <button style="background-color: rgb(111, 36, 36);" (click)="handleError()">Get it</button>
+    <!--Display the error on another component-->
+    <!-- <app-alert [message]="error" (error)="onClose()"></app-alert> -->
+    <ng-template appPlaceholder></ng-template>
+    
   </div>
 </div>

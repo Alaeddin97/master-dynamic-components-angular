@@ -6,9 +6,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { AuthInterceptorService } from './auth-interceptor.service';
+import { AlertComponent } from './alert/alert/alert.component';
+import { PlaceholderDirective } from './placeholder.directive';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AlertComponent, PlaceholderDirective],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [
     {
